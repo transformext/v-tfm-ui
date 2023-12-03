@@ -10,7 +10,7 @@ function prepareVurtifyOverrideStyle() {
   );  
   `;
   if (!fs.existsSync("./assets/style/tfm")) {
-    fs.mkdirSync("./assets/style/tfm");
+    fs.mkdirSync("./assets/style/tfm", { recursive: true });
   }
   if (fs.existsSync("./assets/style/tfm/settings.scss")) {
     const old = fs.readFileSync("./assets/style/tfm/settings.scss");
