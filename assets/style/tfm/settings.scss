@@ -1,0 +1,8 @@
+
+  @forward "vuetify/settings" with (
+    // begin button configuration
+    $button-border-radius: 8px,
+    // end button configuration
+    $utilities: false,
+  );  
+  
