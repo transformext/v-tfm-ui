@@ -1,4 +1,6 @@
-import fs from "fs";
+import fs from 'fs'
+import { createResolver } from '@nuxt/kit'
+const { resolve } = createResolver(import.meta.url)
 
 function prepareVurtifyOverrideStyle() {
   const defaultSettings = `
@@ -6,22 +8,22 @@ function prepareVurtifyOverrideStyle() {
     $button-border-radius: 8px,
     // end button configuration
     $utilities: false,
-  `;
+  `
 
-  const filePath = "./assets/style/tfm/settings.scss";
+  const filePath = './assets/style/tfm/settings.scss'
 
-  if (!fs.existsSync("./assets/style/tfm")) {
-    fs.mkdirSync("./assets/style/tfm", { recursive: true });
+  if (!fs.existsSync('./assets/style/tfm')) {
+    fs.mkdirSync('./assets/style/tfm', { recursive: true })
   }
 
-  let customOverride = "";
+  let customOverride = ''
   if (fs.existsSync(filePath)) {
-    const fileContent = fs.readFileSync(filePath, "utf8");
+    const fileContent = fs.readFileSync(filePath, 'utf8')
     const customOverrideMatch = fileContent.match(
       /\/\/ start override([\s\S]*?)\/\/ end of override/
-    );
+    )
     if (customOverrideMatch && customOverrideMatch[1]) {
-      customOverride = customOverrideMatch[1].trim();
+      customOverride = customOverrideMatch[1].trim()
     }
   }
 
@@ -36,26 +38,33 @@ function prepareVurtifyOverrideStyle() {
     ${customOverride}
     // end of override
   );  
-  `;
+  `
 
-  fs.writeFileSync(filePath, override);
-  console.log("Vuetify override style updated.");
+  fs.writeFileSync(filePath, override)
+  console.log('Vuetify override style updated.')
 }
 
-prepareVurtifyOverrideStyle();
+prepareVurtifyOverrideStyle()
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["vuetify-nuxt-module"],
-  css: ["vuetify/styles", "./assets/style/tfm/settings.scss"],
+  modules: [
+    'vuetify-nuxt-module',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
+  ],
+  css: [
+    'vuetify/styles',
+    resolve('./assets/style/tfm/settings.scss'),
+  ],
   vuetify: {
     vuetifyOptions: {
       defaults: {
-        VBtn: { variant: "flat", color: "red" },
+        VBtn: { variant: 'flat', color: 'red' },
       },
     },
     moduleOptions: {
-      styles: { configFile: "./assets/style/tfm/settings.scss" },
+      styles: { configFile: './assets/style/tfm/settings.scss' },
     },
   },
-});
+})
