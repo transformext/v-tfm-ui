@@ -53,14 +53,12 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
   ],
-  css: [
-    'vuetify/styles',
-    resolve('./assets/style/tfm/settings.scss'),
-  ],
+  css: ['vuetify/styles', resolve('./assets/style/tfm/settings.scss')],
   vuetify: {
     vuetifyOptions: {
       defaults: {
         VBtn: { variant: 'flat', color: 'red' },
+        VTextField: {variant:'outlined'},
       },
     },
     moduleOptions: {
