@@ -6,7 +6,7 @@
   @forward "vuetify/settings" with (
     
     // begin button configuration
-    $button-border-radius:  --measure-dimension-corners-radius-750, 
+    $button-border-radius:  var(--measure-dimension-corners-radius-750), 
     // end button configuration
     $utilities: false,
   
