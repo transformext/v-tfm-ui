@@ -25,5 +25,8 @@
     "sass": "^1.69.5",
     "typescript": "^4.9.3",
     "vuetify-nuxt-module": "^0.7.1"
+  },
+  "dependencies": {
+    "eslint-plugin-vitest": "^0.3.20"
   }
 }

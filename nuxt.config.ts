@@ -6,7 +6,7 @@ const { resolve } = createResolver(import.meta.url)
 function prepareVurtifyOverrideStyle() {
   const defaultSettings = `
     // begin button configuration
-    $button-border-radius:  --measure-dimension-corners-radius-200, 
+    $button-border-radius:  --measure-dimension-corners-radius-750, 
     // end button configuration
     $utilities: false,
   `
