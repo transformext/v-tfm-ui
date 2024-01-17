@@ -5,7 +5,7 @@
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxt build .playground",
+    "build": "nuxt build",
     "generate": "nuxt generate .playground",
     "preview": "nuxt preview .playground",
     "lint": "eslint .",
