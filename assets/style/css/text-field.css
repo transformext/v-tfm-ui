@@ -1,0 +1,30 @@
+.v-label.v-label--active.theme--light {
+  top: -10px !important;
+  right: auto !important;
+}
+.v-label.v-field-label {
+  position: fixed !important;
+  top: -10px !important;
+  left: 0 !important;
+  font-size: 14px !important;
+  color: var(--color-semantic-text-on-surface-variant);
+}
+
+.v-text-field .v-field {
+  margin-top: 16px;
+  cursor: text;
+  border-radius: var(--measure-dimension-semantic-corners-radius-200);
+  /* border-color: var(--color-semantic-theme-border-outline) !important; */
+}
+
+.v-field--disabled {
+  background-color: var(--color-semantic-theme-surface-disabled);
+}
+
+.v-input--density-compact .v-field__input {
+  height: 48px;
+}
+
+.v-field--error {
+  border-color: var(--color-semantic-theme-surface-error) !important;
+}

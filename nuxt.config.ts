@@ -6,8 +6,10 @@ const { resolve } = createResolver(import.meta.url)
 function prepareVurtifyOverrideStyle() {
   const defaultSettings = `
     // begin button configuration
-    $button-border-radius:  var(--measure-dimension-corners-radius-200), 
-    $button-elevation: ('default': 0, 'hover': 0, 'active': 0),
+    $button-border-radius:  var(--measure-dimension-corners-radius-200),
+    // $text-field-border-radius: var(--measure-dimension-corners-radius-200),
+    $text-field-disabled-affix-color: var(--color-semantic-theme-border-disabled),
+
     // end button configuration
     $utilities: false,
   `
@@ -34,6 +36,8 @@ function prepareVurtifyOverrideStyle() {
   // But you can override vuetify settings here by passing the override values under // override here
   // Author: Anirut Kamchai
   @use "./assets/style/css/index.css" as *; 
+  @use 'sass:map';
+  @use 'sass:math';
   @forward "vuetify/settings" with (
     ${defaultSettings}
 
@@ -52,16 +56,21 @@ prepareVurtifyOverrideStyle()
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    'vuetify-nuxt-module',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    'vuetify-nuxt-module',
   ],
   css: ['vuetify/styles', resolve('./assets/style/tfm/settings.scss')],
   vuetify: {
     vuetifyOptions: {
       defaults: {
-        // VBtn: { elevation: 0 },
-        // VTextField: { variant: 'outlined' },
+        VBtn: { color: '#2194F3', variant: 'flat' },
+        VTextField: {
+          variant: 'outlined',
+          persistentPlaceholder: true,
+          color: '#2194F3',
+          baseColor: '#EEE',
+        },
       },
     },
     moduleOptions: {
