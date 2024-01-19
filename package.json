@@ -5,13 +5,14 @@
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxt build .playground",
+    "build": "nuxt build",
     "generate": "nuxt generate .playground",
     "preview": "nuxt preview .playground",
     "lint": "eslint .",
     "postinstall": "nuxt prepare .playground"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
@@ -20,10 +21,12 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "nuxt": "^3.6.2",
-    "nuxt/eslint-config": "nuxt/eslint-config",
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
     "typescript": "^4.9.3",
-    "vuetify-nuxt-module": "^0.7.1"
+    "vuetify-nuxt-module": "^0.7.3"
+  },
+  "dependencies": {
+    "eslint-plugin-vitest": "^0.3.20"
   }
 }
