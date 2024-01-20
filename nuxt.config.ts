@@ -9,6 +9,8 @@ function prepareVurtifyOverrideStyle() {
     $button-border-radius:  var(--measure-dimension-corners-radius-200),
     // $text-field-border-radius: var(--measure-dimension-corners-radius-200),
     $text-field-disabled-affix-color: var(--color-semantic-theme-border-disabled),
+    $alert-border-radius: var(--measure-dimension-corners-radius-200),
+    $alert-title-font-weight: 600,
 
     // end button configuration
     $utilities: false,
@@ -60,7 +62,24 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'vuetify-nuxt-module',
   ],
-  css: ['vuetify/styles', resolve('./assets/style/tfm/settings.scss')],
+  buildModules: [
+    [
+      '@nuxtjs/style-resources',
+      {
+        resources: {
+          css: [
+            'vuetify/styles', // Import Vuetify styles
+            resolve('/assets/style/tfm/settings.scss'), // Import your custom SCSS
+          ],
+        },
+      },
+      'vuetify-nuxt-module',
+    ],
+  ],
+  css: [
+    'vuetify/styles', // Import Vuetify styles
+    resolve('/assets/style/tfm/settings.scss'), // Import your custom SCSS
+  ],
   vuetify: {
     vuetifyOptions: {
       defaults: {
@@ -71,15 +90,16 @@ export default defineNuxtConfig({
           color: '#2194F3',
           baseColor: '#EEE',
         },
+        VAlert: {
+          prominent: true,
+        },
       },
     },
     moduleOptions: {
-      styles: { configFile: './assets/style/tfm/settings.scss' },
+      styles: { configFile: resolve('/assets/style/tfm/settings.scss') },
     },
   },
   resolve: {
-    alias: {
-      '~/plugin-vuetify/lib': '/path/to/vuetify/lib',
-    },
+    extensions: ['.vue', '.js', '.json', '.scss'], // Add .scss if missing
   },
 })

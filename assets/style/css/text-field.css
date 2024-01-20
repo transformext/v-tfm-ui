@@ -25,6 +25,9 @@
   height: 48px;
 }
 
+.v-input--density-compact .v-field__input {
+  font-size: 14px !important;
+}
 .v-field--error {
   border-color: var(--color-semantic-theme-surface-error) !important;
 }
