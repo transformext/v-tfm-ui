@@ -31,3 +31,11 @@
 .v-field--error {
   border-color: var(--color-semantic-theme-surface-error) !important;
 }
+
+.v-field__prepend-inner > .v-icon,
+.v-field__append-inner > .v-icon,
+.v-field__clearable > .v-icon {
+  font-size: 16px !important;
+  color: var(--color-semantic-icon-primary) !important;
+  opacity: 1 !important;
+}
