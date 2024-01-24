@@ -95,6 +95,27 @@ const desserts = [
   <div
     class="w-full h-full flex flex-col justify-center items-center gap-4 p-8 overflow-auto"
   >
+    <p>Checkbox</p>
+    <div class="flex flex-row gap-2">
+      <v-checkbox label="Checkbox"></v-checkbox>
+      <v-checkbox label="Checkbox"></v-checkbox>
+    </div>
+    <p>Redio</p>
+    <v-radio-group>
+      <v-radio label="Radio One" value="one"></v-radio>
+      <v-radio label="Radio Two" value="two"></v-radio>
+    </v-radio-group>
+    <p>Switch</p>
+    <div class="flex flex-row gap-2 justify-center items-center">
+      <v-switch hide-details label="Switch" inset></v-switch>
+      <p>|</p>
+      <v-switch
+        hide-details
+        class="switch-reversed"
+        label="Switch"
+        inset
+      ></v-switch>
+    </div>
     <p>Table</p>
     <div class="w-full px-6">
       <v-data-table :items="desserts"></v-data-table>
