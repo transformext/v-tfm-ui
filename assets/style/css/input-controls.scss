@@ -1,0 +1,22 @@
+// Reversed input variant
+.switch-reversed {
+  .v-input__control {
+    .v-selection-control {
+      display: flex;
+      flex-direction: row-reverse !important;
+      label {
+        padding-left: 0px !important;
+        padding-right: 8px !important;
+      }
+    }
+  }
+}
+.v-switch{
+  .v-input__control {
+    .v-selection-control {
+      label {
+        padding-left: 8px !important;
+      }
+    }
+  }
+}

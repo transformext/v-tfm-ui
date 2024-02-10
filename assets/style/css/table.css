@@ -1,0 +1,16 @@
+.v-table > .v-table__wrapper > table > thead {
+  width: 100%;
+  background-color: var(
+    --color-semantic-theme-surface-surface-container
+  ) !important;
+}
+
+.v-table {
+  border-radius: 4px !important;
+}
+
+.v-table .v-table__wrapper > table > tbody > tr:not(:last-child) > td,
+.v-table .v-table__wrapper > table > tbody > tr:not(:last-child) > th {
+  border-bottom: 0.5px solid
+    var(--color-semantic-theme-surface-surface-container)!important;
+}
