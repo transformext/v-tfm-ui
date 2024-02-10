@@ -1,25 +1,29 @@
+.v-btn {
+  border-radius: var(--measure-dimension-corners-radius-200, 8px) !important;
+}
+
 .v-btn--size-x-small {
-  font-size: 12px;
+  font-size: 12px !important;
   height: 28px !important;
   display: inline-flex;
   padding: var(--measure-dimension-spacing-space-8);
 }
 
 .v-btn--size-small {
-  font-size: 14px;
+  font-size: 14px !important;
   height: 36px !important;
   display: inline-flex;
   padding: var(--measure-dimension-spacing-space-14);
 }
 .v-btn--size-default {
-  font-size: 14px;
+  font-size: 14px !important;
   height: 40px !important;
   display: inline-flex;
   padding: var(--measure-dimension-spacing-space-14);
 }
 
 .v-btn--size-large {
-  font-size: 14px;
+  font-size: 14px !important;
   height: 48px !important;
   display: inline-flex;
   padding: var(--measure-dimension-spacing-space-14);
