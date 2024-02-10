@@ -83,15 +83,55 @@ export default defineNuxtConfig({
   vuetify: {
     vuetifyOptions: {
       defaults: {
-        VBtn: { color: '#2194F3', variant: 'flat' },
+        VBtn: { color: 'primary' },
         VTextField: {
           variant: 'outlined',
           persistentPlaceholder: true,
-          color: '#2194F3',
-          baseColor: '#EEE',
+          color: 'primary',
+          baseColor: '#C6C6C6',
+        },
+        VAutocomplete: {
+          variant: 'outlined',
+          persistentPlaceholder: true,
+          color: 'primary',
+          baseColor: '#C6C6C6',
+        },
+        VTextarea: {
+          variant: 'outlined',
+          persistentPlaceholder: true,
+          color: 'primary',
+          baseColor: '#C6C6C6',
         },
         VAlert: {
           prominent: true,
+          border: true,
+        },
+        VCheckbox: {
+          trueIcon: 'fas fa-square-check',
+          falseIcon: 'fal fa-square',
+          color: 'primary',
+          hideDetails: true,
+          height: '25px',
+        },
+        VRadio: {
+          trueIcon: 'fas fa-circle-dot',
+          falseIcon: 'fal fa-circle',
+          color: 'primary',
+        },
+      },
+      theme: {
+        defaultTheme: 'default',
+        themes: {
+          default: {
+            colors: {
+              primary: '#2194f3',
+              secondary: '#1783aa',
+              accent: '#8c9eff',
+              error: '#d32f2f',
+              success: '#43a047',
+              surfaceVariant: '#616161',
+            },
+          },
         },
       },
     },

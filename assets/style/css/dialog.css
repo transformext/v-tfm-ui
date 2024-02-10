@@ -1,0 +1,3 @@
+.v-dialog > .v-overlay__content > .v-card > .v-card-text, .v-dialog > .v-overlay__content > form > .v-card > .v-card-text {
+  padding: 16px !important
+}

@@ -11,7 +11,7 @@
     }
   }
 }
-.v-switch{
+.v-switch {
   .v-input__control {
     .v-selection-control {
       label {
@@ -19,4 +19,15 @@
       }
     }
   }
+}
+.v-checkbox .v-selection-control {
+  min-height: 25px !important;
+  height: 25px !important;
+}
+.v-selection-control .v-label {
+  font-size: 14px !important;
+}
+
+.v-autocomplete .v-field .v-field__append-inner > .v-icon, .v-field__clearable > .v-icon {
+  color: var(--color-semantic-icon-on-surface-variant) !important;
 }
